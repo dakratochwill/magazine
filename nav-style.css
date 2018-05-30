@@ -1,0 +1,157 @@
+.navbar {
+    transition: 0.5s ease-in-out;
+    height: 50px;
+    margin-top: 63px;
+}
+
+.navbar a {
+    color: #555;
+}
+
+.nav-margin {
+    margin-top: 0px;
+}
+
+.custom-toggler {
+    color: #ffba00;
+    padding: 13px 20px;
+    padding-top: 18px;
+    background: none;
+    margin-top: 30px;
+    font-size: 22px;
+}
+
+a.nav-expander {
+    display: block;
+    font-size: 18px;
+    font-weight: 400;
+    right: 0px;
+    text-decoration: none;
+    width: auto;
+    z-index: 12;
+    transition: right 1.5s ease-in-out 0s;
+}
+
+a.nav-expander:hover {
+    cursor: pointer;
+}
+
+a.nav-expander.fixed {
+    position: fixed;
+}
+
+/* Adjusts position of nav on expansion */
+
+.nav-expanded a.nav-expander.fixed {
+    right: -300px;
+    transition: right 1s ease-in-out 0s;
+}
+
+nav {
+    display: block;
+    height: 100%;
+    overflow: auto;
+    position: fixed;
+    top: 63px;
+    right: -400px;
+    font-size: 15px;
+    width: 370px;
+    z-index: 2000;
+    transition: right 1s ease-in-out 0s;
+}
+
+.nav-expanded nav {
+    right: 0;
+    transition-delay: 0.5s;
+}
+
+.scroll {
+    top: 0;
+}
+
+body.nav-expanded {
+    margin-left: 0em;
+
+}
+
+#nav-close {
+    color: #fff;
+    text-decoration: none;
+    font-size: 40px;
+    padding: 0px;
+}
+
+#nav-close:hover {
+    color: #FFBA00;
+}
+
+.main-menu {
+    width: 300px;
+    margin-left: auto;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    margin-bottom: 0px;
+}
+.main-menu li,
+.main-menu li ul li {
+    border-bottom: 1px solid #333;
+    font-size: 18px;
+    max-width: 100%;
+}
+
+.main-menu li:first-child {
+    text-align: right;
+    border: none;
+}
+
+.main-menu li:last-child {
+    border-bottom: none;
+}
+
+.main-menu li a,
+.main-menu li ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s ease;
+    padding: 15px;
+    display: block;
+}
+
+.main-menu li a:hover {
+    color: #FFBA00;
+    text-decoration: none;
+}
+.main-menu li ul li:first-child {
+    border-bottom: 1px solid #333;
+    font-size: 18px;
+    max-width: 100%;
+    text-align: left;
+}
+.main-menu li ul li {
+    background: #ffffff;
+    width: 100%;
+}
+.main-menu li ul li a {
+    color: #111;
+}
+.main-menu li ul li a:hover {
+    background: #ffba00;
+    color: inherit;
+}
+@media screen and (max-width: 525px) {
+    .navbar {
+        background: none;
+    }
+    .custom-toggler {
+        margin-top: 0px;
+        padding: 10px;
+    }
+    #nav-close {
+        top: 0px;
+        padding: 0px;
+        border-radius: 0px;
+        height: 50px;
+        margin-top: -5px;
+        right: 15px;
+    }
+}
