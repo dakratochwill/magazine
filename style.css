@@ -18,6 +18,7 @@ h5 {
     font-family: 'Barlow Condensed', sans-serif;
     padding: 0;
     margin: 0;
+    letter-spacing: 0.5px;
 }
 
 p {
@@ -83,17 +84,19 @@ img {
 
 header {
     height: 15vh;
-    background: #fff;
+    background: rgb(0,128,128);
+    background: linear-gradient(135deg, rgba(0,128,128,1) 0%, rgba(255,179,0,1) 100%);
     /* first number is postion on the x axis, second number is postion on the y axis. Follows clockwise direction from the top left corner. */
     clip-path: polygon(0% 0%, 100% 0%, 100% 75%, calc(100% - 25vw) 100%, 0% 75%);
     /* change the calc height to a percentage height to get alternate responsive behavior*/
     position: absolute;
     width: 100%;
+    font-size: 35px;
+    color: #fff;
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 0.5px;
 }
 
-header h1 {
-    color: #333;
-}
 .wrapper {
     height: 100vh;
     overflow-x: hidden;
@@ -182,8 +185,11 @@ header h1 {
 
 .centered-content {
     margin: auto;
-    max-width: 350px;
+    max-width: 400px;
     text-align: center;
+    background: rgba(255,255,255,0.9);
+    padding: 50px;
+    color: #333;
 }
 
 .grid {
@@ -211,15 +217,17 @@ header h1 {
 }
 
 .footer {
-    min-height: 30vh;
-    background: #111;
+    background: rgb(0,128,128);
+    background: linear-gradient(135deg, rgba(0,128,128,1) 0%, rgba(255,179,0,1) 100%);
     color: #fff;
     padding: 30px;
 }
 
 .footer p {
-    max-width: 100px;
-    margin: auto auto;
+    max-width: 200px;
+    margin: 30px auto;
+    font-size: 20px;
+    text-align: center;
 }
 
 @media screen and (max-width:768px) {
